@@ -20,17 +20,18 @@ describe("factorial: 引数を1つとる関数factorialを、次の条件を満�
 
     context("引数が0以下の数の場合", function(){
         it("nullを返す", function(){
-            (factorial(0) == null).should.equal(true);
-            (factorial(-1) == null).should.equal(true);
-            (factorial(-10.9999) == null).should.equal(true);
+            factorial(0).should.equal(null);
+            factorial(-1).should.equal(null);
+            factorial(-10.9999).should.equal(null);
         });
     });
 
     context("引数が数値以外の場合", function(){
         it("nullを返す", function(){
-            (factorial("hello") == null).should.equal(true);
-            (factorial({}) == null).should.equal(true);
-            (factorial([]) == null).should.equal(true);
+            factorial("hello").should.equal(null);
+            factorial("10").should.equal(null);
+            factorial({}).should.equal(null);
+            factorial([]).should.equal(null);
         });
     });
     

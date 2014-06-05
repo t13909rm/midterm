@@ -11,14 +11,13 @@ describe("findFirstEvenNumber: 引数を一つ取る関数findFirstEvenNumberを
 
         context("配列の長さが0の場合", function(){
             it("nullを返す", function(){
-		var n = (findFirstEvenNumber([]) == null);
-		(n).should.equal(true);
+                findFirstEvenNumber([]).should.equal(null);
             });
         });
 
         context("要素が全て奇数の場合", function(){
             it("nullを返す", function(){
-                (findFirstEvenNumber([1, 3, 5, 7, 9]) == null).should.equal(true);
+                findFirstEvenNumber([1, 3, 5, 7, 9]).should.equal(null);
             });
         });
         
